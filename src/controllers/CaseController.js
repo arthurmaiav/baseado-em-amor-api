@@ -28,8 +28,6 @@ module.exports = {
                 donationUrl,
             }).returning('id');
 
-        console.log(id);
-
         return response.json({ id });
     },
 

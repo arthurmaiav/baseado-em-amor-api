@@ -28,7 +28,7 @@ module.exports = {
                 donationUrl,
             });
 
-        return response.json(user.rows);
+        return response.json(user);
     },
 
     async delete(request, response) {

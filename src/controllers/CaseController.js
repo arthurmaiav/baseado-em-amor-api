@@ -26,9 +26,7 @@ module.exports = {
                 description,
                 value,
                 donationUrl,
-            }).returning('id').then(function() {
-                console.log(id);
-            });
+            }).returning('id');
 
             console.log(id);
 

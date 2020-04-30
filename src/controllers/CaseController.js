@@ -20,7 +20,7 @@ module.exports = {
     async create(request, response) {
         const { title, description, value, donationUrl } = request.body;
 
-        const [id] = connection('cases').insert(
+        const user = connection('cases').insert(
             {
                 title,
                 description,
@@ -28,7 +28,7 @@ module.exports = {
                 donationUrl,
             });
 
-        return response.json({ id });
+        return response.json(user);
     },
 
     async delete(request, response) {

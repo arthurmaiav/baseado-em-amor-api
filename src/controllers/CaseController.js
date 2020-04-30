@@ -20,15 +20,19 @@ module.exports = {
     async create(request, response) {
         const { title, description, value, donationUrl } = request.body;
 
-        const [id] = await connection('cases').insert(
+        const id = await connection('cases').insert(
             {
                 title,
                 description,
                 value,
                 donationUrl,
-            }).returning();
+            }).returning('id').then(function() {
+                console.log(id);
+            });
 
-        return response.json({ id });
+            console.log(id);
+
+        return response.json(id);
     },
 
     async delete(request, response) {

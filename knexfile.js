@@ -44,8 +44,6 @@ module.exports = {
     client: 'pg',
     connection: {
       database: process.env.DATABASE_URL,
-      user: 'iufaiizomhvfpv',
-      password: '3853c32a15338034703e2a0e0dd2403ee63df909c1698f49866fc07333f4513a'
     },
     pool: {
       min: 2,

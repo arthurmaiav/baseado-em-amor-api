@@ -28,7 +28,7 @@ module.exports = {
                 donationUrl,
             });
 
-        return response.status(200);
+        return response.status(200).send();
     },
 
     async delete(request, response) {

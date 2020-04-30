@@ -26,7 +26,7 @@ module.exports = {
                 description,
                 value,
                 donationUrl,
-            });
+            }).returning();
 
         return response.json(user);
     },

@@ -3,7 +3,7 @@ exports.up = function (knex) {
         table.increments('id');
         table.string('title').notNullable();
         table.text('description').notNullable();
-        table.numeric('value');
+        table.float ('value');
         table.string('donationUrl');
     });
 };

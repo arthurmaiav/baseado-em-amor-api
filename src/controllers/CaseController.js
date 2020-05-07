@@ -25,7 +25,7 @@ module.exports = {
                 title,
                 description,
                 value,
-                donationUrl,
+                donationUrl
             }).returning('id');
 
         return response.json({ id });

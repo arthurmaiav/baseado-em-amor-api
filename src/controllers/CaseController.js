@@ -8,7 +8,7 @@ module.exports = {
         const { page = 1 } = request.query;
 
         const cases = await connection('cases')
-            .limit(12)
+            .limit(24)
             .offset((page - 1) * 5)
             .select(['cases.*']);
 
